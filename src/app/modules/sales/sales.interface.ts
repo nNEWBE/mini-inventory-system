@@ -5,4 +5,12 @@ export interface ISale {
   totalAmount: number;
   paidAmount: number;
   dueAmount: number;
+  saleDetails: ISaleDetail[];
+  isDeleted: boolean;
+}
+
+export interface ISaleDetail {
+  productId: number;
+  quantity: number;
+  price: number;
 }
