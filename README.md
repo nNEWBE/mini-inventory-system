@@ -68,8 +68,6 @@ yarn start:dev
 | ------ | ---------------------------- | ----------------------- |
 | POST   | `/api/v1/auth/register`      | Register new user       |
 | POST   | `/api/v1/auth/login`         | Log in with credentials |
-| POST   | `/api/v1/auth/refresh-token` | Get new access token    |
-| POST   | `/api/v1/auth/logout`        | Logout                  |
 
 ---
 
