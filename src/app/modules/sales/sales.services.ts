@@ -3,6 +3,7 @@ import AppError from "../../errors/apperror";
 import { Product } from "../product/product.model";
 import { ISale } from "./sales.interface";
 import { Sale } from "./sales.model";
+import { Customer } from "../customer/customer.model";
 
 const createSalesIntoDB = async (data: ISale) => {
     try {
@@ -23,6 +24,11 @@ const createSalesIntoDB = async (data: ISale) => {
                 { productId: item.productId },
                 { $inc: { stockQty: -item.quantity } }
             );
+
+            await Customer.updateOne(
+                { customerId: data.customerId },
+                { $inc: { loyaltyPoints: 1 } }
+            );
         }
 
         const result = await Sale.create(data);
@@ -31,7 +37,6 @@ const createSalesIntoDB = async (data: ISale) => {
         throw new AppError(status.BAD_REQUEST, "Sale creation failed", error.stack);
     }
 };
-
 
 export const SaleServices = {
     createSalesIntoDB,

@@ -1,0 +1,486 @@
+{
+	"info": {
+		"_postman_id": "a533670a-98a7-4bba-a997-a29e92492206",
+		"name": "Practice Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39342680"
+	},
+	"item": [
+		{
+			"name": "Sales",
+			"item": [
+				{
+					"name": "Create Sales",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1Mjg0MjE5MywiZXhwIjoxNzUyOTI4NTkzfQ.vUGS626JIwmYgB9oDk07bRmZvqNkXteWpimiPTC6ouY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"saleId\": 1,\r\n  \"saleDate\": \"2023-10-05T00:00:00Z\",\r\n  \"customerId\": 2,\r\n  \"totalAmount\": 130,\r\n  \"paidAmount\": 100,\r\n  \"dueAmount\": 30,\r\n  \"saleDetails\": [\r\n    {\r\n      \"productId\": 3,\r\n      \"quantity\": 3,\r\n      \"price\": 90\r\n    },\r\n    {\r\n      \"productId\": 4,\r\n      \"quantity\": 2,\r\n      \"price\": 40\r\n    }\r\n  ],\r\n  \"isDeleted\": false\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/sales/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"sales",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Report",
+			"item": [
+				{
+					"name": "Get Report",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1Mjg0MjE5MywiZXhwIjoxNzUyOTI4NTkzfQ.vUGS626JIwmYgB9oDk07bRmZvqNkXteWpimiPTC6ouY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"startDate\":\"2023-07-01\",\r\n    \"endDate\":\"2025-07-05\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/report",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"report"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"admin\",\r\n    \"password\":\"admin123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/authentication/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"authentication",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"admin\",\r\n    \"password\":\"admin123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/authentication/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"authentication",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Get All Product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1Mjg0MjE5MywiZXhwIjoxNzUyOTI4NTkzfQ.vUGS626JIwmYgB9oDk07bRmZvqNkXteWpimiPTC6ouY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"saleId\": 1,\r\n  \"saleDate\": \"2023-10-05T00:00:00Z\",\r\n  \"customerId\": 1,\r\n  \"totalAmount\": 1000,\r\n  \"paidAmount\": 500,\r\n  \"dueAmount\": 500,\r\n  \"saleDetails\": [\r\n    {\r\n      \"productId\": 1,\r\n      \"quantity\": 2,\r\n      \"price\": 59.99\r\n    },\r\n    {\r\n      \"productId\": 2,\r\n      \"quantity\": 2,\r\n      \"price\": 99\r\n    }\r\n  ],\r\n  \"isDeleted\": false\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/product?page=1&sortBy=price",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "Electronics",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "LED ",
+									"disabled": true
+								},
+								{
+									"key": "sortBy",
+									"value": "price"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1Mjk3NzI2MSwiZXhwIjoxNzUzMDYzNjYxfQ.U4p79H6WmqYBIL2L6I98Q5f4A5Zs0bb6IXgy2ySx5yg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": 6,\r\n    \"name\": \"Bluetooth Speaker\",\r\n    \"barcode\": \"SPK-2025071802\",\r\n    \"price\": 49.99,\r\n    \"stockQty\": 50,\r\n    \"category\": \"Audio\",\r\n    \"status\": true,\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/product/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product",
+								"create"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "sortBy",
+									"value": "price",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1Mjk3NzI2MSwiZXhwIjoxNzUzMDYzNjYxfQ.U4p79H6WmqYBIL2L6I98Q5f4A5Zs0bb6IXgy2ySx5yg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Laptop Stand\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/product/update/6878e6f844a59248dfb33b2d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product",
+								"update",
+								"6878e6f844a59248dfb33b2d"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "sortBy",
+									"value": "price",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1Mjk3NzI2MSwiZXhwIjoxNzUzMDYzNjYxfQ.U4p79H6WmqYBIL2L6I98Q5f4A5Zs0bb6IXgy2ySx5yg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/product/delete/6878e6f844a59248dfb33b2d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product",
+								"delete",
+								"6878e6f844a59248dfb33b2d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Create Customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1Mjk3NzI2MSwiZXhwIjoxNzUzMDYzNjYxfQ.U4p79H6WmqYBIL2L6I98Q5f4A5Zs0bb6IXgy2ySx5yg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\": 7,\r\n    \"fullName\": \"Fatema Khatun\",\r\n    \"phone\": \"01812345678\",\r\n    \"email\": \"fatema.k@example.com\",\r\n    \"loyaltyPoints\": 45\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/customer/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"customer",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1Mjk3NzI2MSwiZXhwIjoxNzUzMDYzNjYxfQ.U4p79H6WmqYBIL2L6I98Q5f4A5Zs0bb6IXgy2ySx5yg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"Fatema Khatun\",\r\n    \"phone\": \"01812345678\",\r\n    \"email\": \"fatema.k@example.com\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "12345{    \"fullName\": \"Fatema \",    \"phone\": \"01812345678\",    \"email\": \"fatema.com\"  } Ctrl+Alt+P for Postbot{    \"fullName\": \"Fatema \",    \"phone\": \"01812345678\",    \"email\": \"fatema.com\"  } Ctrl+Alt+P for Postbot",
+							"host": [
+								"12345{    \"fullName\": \"Fatema \",    \"phone\": \"01812345678\",    \"email\": \"fatema",
+								"com\"  } Ctrl+Alt+P for Postbot{    \"fullName\": \"Fatema \",    \"phone\": \"01812345678\",    \"email\""
+							],
+							"port": " \"fatema.com\"  } Ctrl+Alt+P for Postbot"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Customer",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1Mjk3NzI2MSwiZXhwIjoxNzUzMDYzNjYxfQ.U4p79H6WmqYBIL2L6I98Q5f4A5Zs0bb6IXgy2ySx5yg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/customer/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"customer",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1Mjk3NzI2MSwiZXhwIjoxNzUzMDYzNjYxfQ.U4p79H6WmqYBIL2L6I98Q5f4A5Zs0bb6IXgy2ySx5yg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/customer/delete/6878ee55c48ccdfd2055cc74",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"customer",
+								"delete",
+								"6878ee55c48ccdfd2055cc74"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
