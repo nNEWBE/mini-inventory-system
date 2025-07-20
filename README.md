@@ -1,4 +1,4 @@
-# 🛒 [Mini Inventory Management System (MERN)] (https://interview-task-weld.vercel.app/)
+# 🛒 [Mini Inventory Management System (MERN)](https://interview-task-weld.vercel.app/)
 
 A simple inventory management system built using **MongoDB**, **Express.js**, **React.js**, and **Node.js**. It includes modules for authentication, customer & product management, sales, and reporting.
 
